@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#set -x
-
 # cmd line options
 CSV_DIR=''
 IMG_DIR=''
@@ -57,16 +55,17 @@ parse_args_prepare() {
       exit 1
    }
 
-   ERROR=$(mkdir -p "$CLEAN_CSV_DIR" 2>&1)
-   if [ "$ERROR" ] ; then
-      printf '%s: ERROR: %s\n' "$0" "$ERROR" >&2
+   ERROR_MSG=$(mkdir -p "$CLEAN_CSV_DIR" 2>&1)
+   if [ "$ERROR_MGS" ] ; then
+      printf '%s: ERROR: %s\n' "$0" "$ERROR_MSG" >&2
       exit 1
    fi
 
-   STAT="$CLEAN_CSV_DIR"/stat
-   touch "$STAT"
    test -w "$IMG_DIR" && CAN_DEL_IMAGE=CAN_DEL_IMAGE
    test -w "$CSV_DIR" && CAN_MOD_RECORD=CAN_MOD_RECORD
+
+   STAT="$CLEAN_CSV_DIR"/stat
+   touch "$STAT"
 }
 
 
