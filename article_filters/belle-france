@@ -1,7 +1,3 @@
 #!/bin/sh
 
-QUERIES=$(cat ../articles/Belle-France.txt | sed -n 's/^#\(.\+\) - [0-9]* \?g.*/\1/p')
-N=$(( $(printf '%s\n' "$QUERIES" | wc -l) / 4 ))
-
-printf 'N: %d\n' "$N"
-printf '%s\n' "$QUERIES"
+cat ../articles/Belle-France.txt | sed -n 's/^#\(.\+\) - [0-9]* \?g.*/\1/p'

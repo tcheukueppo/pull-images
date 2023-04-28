@@ -1,10 +1,8 @@
 #!/bin/sh
-#set -x
-# `pull' reads queries from the standard input, download
-# images related to those queries and insert their corresponding 
-# information into an sqlite3 database named 'ima.sqlite3'.
-# Images are stored in './images' directory.
 
+#set -x
+
+# ima isn't ready yet
 alias ima='python ~/ground/projects/ima/src/__main__.py'
 
 # contains the list of pids of all the workers
