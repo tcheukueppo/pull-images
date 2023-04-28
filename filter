@@ -1,0 +1,126 @@
+#!/bin/sh
+
+# cmd line options
+CSV_DIR=''
+IMG_DIR=''
+CLEAN_CSV_DIR=''
+
+STAT=''
+CAN_DEL_IMAGE=''
+CAN_MOD_RECORD=''
+
+usage() {
+   printf 'Usage: %s [-i PATH_IMAGE_DIR] [ -c PATH_CSV_DIR ] [ -g FILTERED_CSV_DIR ]\n' "$0" >&2
+   printf '\t-h: display this help message and exit\n'
+   printf '\t-i: path to the directory containing images\n' >&2
+   printf '\t-c: path to the directory containing unfiltered csv files\n' >&2
+   printf '\t-g: path to the directory containing filterd csv files\n' >&2
+   printf 'NOTE: All options with arguments are mandatory\n' >&2
+   exit 1
+}
+
+parse_args_prepare() {
+   local ERROR=''
+
+   while test -gt 0 ; do
+      expr "$1" : '-h$' >/dev/null && usage
+
+      if test $# -lt 1 || expr "$2" : '-' >/dev/null ; then
+         printf '%s: invalid option(s)\n' "$0" >&2
+         usage
+      fi
+      case "$1" in
+         -g)
+            CLEAN_CSV_DIR=$2
+            ;;
+         -i)
+            IMG_DIR=$2
+            ;;
+         -c)
+            CSV_DIR=$2
+            ;;
+         -*)
+            printf "%s: ERROR: unknown option \`%s'\n" "$0" "$1" >&2
+            ;;
+       esac
+      shift 2
+   done
+
+   test -d "$IMG_DIR" || {
+      printf "%s: directory '%s' does not exist\n" "$IMG_DIR" >&2
+      exit 1
+   }
+   test -d "$CSV_DIR" || {
+      printf "%s: directory '%s' does not exist\n" "$CSV_DIR" >&2
+      exit 1
+   }
+
+   ERROR=$(mkdir -p "$CLEAN_CSV_DIR" 2>&1)
+   if [ "$ERROR" ] ; then
+      printf '%s: ERROR: %s\n' "$0" "$ERROR" >&2
+      exit 1
+   fi
+
+   STAT="$CLEAN_CSV_DIR"/stat
+   touch "$STAT"
+   test -w "$IMG_DIR" && CAN_DEL_IMAGE=CAN_DEL_IMAGE
+   test -w "$CSV_DIR" && CAN_MOD_RECORD=CAN_MOD_RECORD
+}
+
+
+choose_records() {
+   local CLEAN_CSV_FILE=''
+
+   for CSV_FILE in "$CSV_DIR"/*.csv ; do
+      CLEAN_CSV_FILE="${CLEAN_CSV_DIR%%/}/${CSV_FILE%.csv}_clean.csv"
+
+      touch "$CLEAN_CSV_FILE"
+      # Try to resume from where you stopped
+      cat "$STAT" | grep -q "$CSV_FILE" && continue
+
+      printf 'ON %s\n' "$CSV_FILE"
+      while read RECORD ; do
+         IMG=$(printf '%s\n' "$RECORD" | awk -F[' '] '{print $4}')
+         IMG_REGEX=$(printf '%s\n' "$IMG" | sed -e 's/\./\./')
+         IMG_ABS_PATH="${IMG_DIR%%/}/$IMG"
+
+         cat "$CLEAN_CSV_FILE" | grep -q " $IMG_REGEX$" && continue
+
+         # check if image exist and if not, with permission, remove record
+         test -f "$IMG_ABS_PATH" || {
+            printf "%s: FATAL: image '%s' does not exist\n" "$0" "$IMG" >&2
+            if [ "$CAN_MOD_RECORD" ] ; then
+               printf 'Should I delete this record(Y/N)(case sensitive)? '
+               read ANSWER
+               test "$ANSWER" = Y && sed -i "/ $IMG_REGEX$/d" "$CSV_FILE"
+            fi
+            continue
+         }
+
+         feh "$IMG" >/dev/null 2>&1 &
+         if test $? -ne 0 ; then
+            printf '%s: Hmmm... seems like the image is bad\n' "$0"
+            if [ "$CAN_DEL_IMAGE" ] ; then
+               printf 'Should is delete this image(Y/N)(case sensitive)? '
+               read ANSWER
+               test "$ANSWER" = Y && rm -fv "$IMG_ABS_PATH"
+            fi
+         fi
+
+         ASYNC_P_PID=$!
+         printf "Do you want this image(Y/N)(case sensitive)? "
+         read ANSWER
+         test "$ANSWER" = Y && printf '%s\n' "$RECORD" >>"$CLEAN_CSV_FILE"
+         kill -KILL "$ASYNC_P_PID"
+      done <"$CSV_FILE"
+
+      printf '%s\n' "$CSV_FILE" >>"$STAT"
+   done
+}
+
+filter() {
+   parse_args_prepare "$@"
+   choose_records
+}
+
+filter "$@"

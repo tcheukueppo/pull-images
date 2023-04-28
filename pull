@@ -1,0 +1,195 @@
+#!/bin/sh
+#set -x
+# `pull' reads queries from the standard input, download
+# images related to those queries and insert their corresponding 
+# information into an sqlite3 database named 'ima.sqlite3'.
+# Images are stored in './images' directory.
+
+alias ima='python ~/ground/projects/ima/src/__main__.py'
+
+# contains the list of pids of all the workers
+W_PIDS=''
+
+# ima options
+ENGINE='duckduckgo'
+N_IMAGES=20
+N_IMAGES_SITES=5
+N_SITES=10
+TIMEOUT=20
+N_RETRYS=1000000
+N_RETRYS_SITES=5
+
+# vars for cmd options
+IMAGE_DIR=''
+CSV_DIR=''
+N_WORKERS=''
+
+trap spawn_workers ALRM
+trap kill_workers KILL TERM HUP STOP INT
+
+usage () {
+   printf 'Usage: %s [-h] [-i IMAGE_DIR] [-c CSV_DIR] [-w N]\n' "$0" >&2
+   printf '\t-h: Display this help message an exit\n' >&2
+   printf '\t-w: Specify the number of worker processes\n' >&2
+   printf '\t-i: Specify the path to where images will be stored\n' >&2
+   printf '\t-c: Specify the path to where CSV files will be store\n' >&2
+   printf '\n' >&2
+   printf 'NOTE: All arguments are mandatory in the exception of -h\n' >&2
+   exit 1
+}
+
+# check for valid arguments and if dependencies are installed
+check_requirements () {
+   local PROG_NAME='' ERROR=''
+
+   # ima is to be added in future
+   for PROG_NAME in wget ; do
+      command -v $PROG_NAME >/dev/null
+      if test $? -ne 0 ; then
+         printf '%s: error: %s not found\n' "$0" "$PROG_NAME" >&2
+         exit 1
+      fi
+   done
+
+   test $# -eq 0 && usage
+   while test $# -gt 0 ; do
+      expr "$1" : '-h$' >/dev/null && usage
+
+      test $# -lt 2 && usage
+      expr "$2" : '-' >/dev/null && usage
+      case "$1" in
+         -w)
+            expr "$2" : '+\?[0-9]\+$' >/dev/null || {
+               printf "%s: ERROR: argument to -w must be a positive integer\n" "$0" >&2
+               exit 1
+            }
+            N_WORKERS=$2
+            ;;
+         -c)
+            CSV_DIR=$2
+            ;;
+         -i)
+            IMAGE_DIR=$2
+            ;;
+         -*)
+            printf '%s: ERROR: invalid option (%s)\n' "$0" "$1" >&2
+            exit 1
+            ;;
+      esac
+      shift 2
+   done
+
+   if test -z "$CSV_DIR" || test -z "$IMAGE_DIR" || test -z "$N_WORKERS"
+   then
+      printf '%s: ERROR: all arguments are mandatory\n' "$0" >&2
+      usage
+   fi
+
+   # wrap errors to avoid overhead
+   ERROR=$(mkdir -p "$CSV_DIR" "$IMAGE_DIR" 2>&1)
+   if test -n "$ERROR" ; then
+      printf '%s: ERROR: %s\n' "$0" "$ERROR" >&2
+      exit 1
+   fi
+
+   # check write permission
+   test -w "$CSV_DIR" || {
+      printf '%s: ERROR: no permission to write in %s\n' "$0" "$CSV_DIR" >&2
+      exit 1
+   }
+   test -w "$IMAGE_DIR" || {
+      printf '%s: ERROR: no permission to write in %s\n' "$0" "$IMAGE_DIR" >&2
+      exit 1
+   }
+}
+
+# kill workers, but does not kill all processes in
+# the worker's process tree to avoid insane results
+kill_workers() {
+   local W_PID=''
+
+   IFS=$':'
+   for W_PID in $W_PIDS ; do
+      kill -9 $W_PID
+   done
+   exit 1
+}
+
+# wait for all workers to finish their work
+wait_workers () {
+   local W_PID=''
+
+   while [ 1 ] ; do
+      if test -z "$W_PIDS" ; then
+         break
+      fi
+      W_PID=$(printf '%s\n' "$W_PIDS" | cut -d: -f2)
+      W_PIDS=$(printf '%s\n' "$W_PIDS" | sed -E -e 's/^[^:]+:?(.*)$/\1/')
+      wait $W_PID
+   done
+}
+
+spawn_workers () {
+   local QUERY=''
+
+   read QUERY
+   test -z "$QUERY" && return
+
+   # fork a new worker process
+   (
+      trap '' ALRM
+
+      CSV_FILE="${CSV_DIR%%/}/$(
+         printf '%s\n' "$QUERY" | tr '[A-Z]' '[a-z]' | sed -e '
+            s#/##g
+            s/["'"'"'.|@&+$^*#\\]//g
+            s/[- }{,;_]\|\]\|\[\|(\|)/_/g
+            s/ *//g
+            s/_\+/_/g
+            s/^[-_ \t;.]*//
+            s/[-_ \t;.]*$//'
+            #y///g'
+      )_$(mktemp -u XXXXXX).csv"
+      echo $CSV_FILE
+      exit 1
+
+      ima -n $N_IMAGES \
+         --image-count $N_IMAGES_SITES \
+         --engine $ENGINE \
+         --number-sites $N_SITES \
+         --timeout $TIMEOUT \
+         --retrys $N_RETRYS \
+         --retrys-per-sites $N_RETRYS_SITES \
+         --image-link '{w} {l} {e}' "$QUERY" |
+      while read FOUND ; do
+         SITE=$(printf '%s\n' "$FOUND" | awk -F[' '] '{print $1}')
+         LINK=$(printf '%s\n' "$FOUND" | awk -F[' '] '{print $2}')
+         IMG_FILE=$(mktemp -u XXXXXX).$(printf '%s\n' "$FOUND" | awk -F[' '] '{print $3}')
+         ABS_PATH_FILE="${IMAGE_DIR%%/}/$FILENAME"
+
+         wget --quiet --tries 10 "$LINK" --output-document="$ABS_PATH_FILE"
+         if test $? -eq 0 ; then
+            printf '%s %s %s %s\n' "$(printf '%s\n' "$QUERY" | base64)" "$SITE" "$LINK" "$IMG_FILE" >>"$CSV_FILE"
+         else
+            printf '%s: wget failed to download image\n' "$0" >&2
+            rm -v "$ABS_PATH_FILE" >&2
+         fi
+      done
+
+      kill -ALRM $$
+   ) 2>>error_logs &
+
+   W_PIDS="${W_PIDS}${W_PIDS:+:}$!"
+}
+
+pull () {
+   check_requirements "$@"
+
+   while [ $N_WORKERS -ne 0 ] ; do
+      spawn_workers
+      N_WORKERS=$(($N_WORKERS - 1))
+   done
+   wait_workers
+}
+
+pull "$@"

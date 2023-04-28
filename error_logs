@@ -1,0 +1,873 @@
+[[31mErr[0m] Could not follow https://pixabay.com skipping ...
+[[31mErr[0m] Could not follow https://www.amazon.fr skipping ...
+[[31mErr[0m] Could not follow https://world-st.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-de.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://odelices.ouest-france.fr skipping ...
+[[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://www.pexels.com skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://www.pexels.com skipping ...
+[[31mErr[0m] Could not follow https://pixabay.com skipping ...
+[[31mErr[0m] Could not follow https://www.julietteetchocolat.com skipping ...
+[[31mErr[0m] Could not follow https://www.carrefour.fr skipping ...
+[[31mErr[0m] Could not follow https://www.supermarchesmatch.fr skipping ...
+[[31mErr[0m] Could not follow https://www.pexels.com skipping ...
+[[31mErr[0m] Could not follow https://www.intermarche.com skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://thebearfootbaker.com skipping ...
+[[31mErr[0m] Could not follow https://world-de.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://aubongoutboutique.com skipping ...
+[[31mErr[0m] Could not follow https://pixabay.com skipping ...
+[[31mErr[0m] Could not follow https://world-nl.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://www.auchan.fr skipping ...
+[[31mErr[0m] Could not follow https://guide.michelin.com skipping ...
+[[31mErr[0m] Could not follow https://davesgarden.com skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://world-gl.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://world-mi.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-fr.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-qu.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://world-ms.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-nl.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-ca.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://pixabay.com skipping ...
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://world-hr.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://market.lamater.net skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://www.pexels.com skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://www.assortedeats.com skipping ...
+[[31mErr[0m] Could not follow https://pixabay.com skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://www.historyhit.com skipping ...
+[[31mErr[0m] Could not follow https://www.flickr.com skipping ...
+[[31mErr[0m] Could not follow https://www.pexels.com skipping ...
+[[31mErr[0m] Could not follow https://www.pexels.com skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://en.wikipedia.org skipping ...
+[[31mErr[0m] Could not follow https://world-oc.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-ca.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://www.amazon.fr skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://www.intermarche.com skipping ...
+Traceback (most recent call last):
+  File "/home/kueppo/ground/projects/ima/src/__main__.py", line 13, in <module>
+    ima.main()
+  File "/home/kueppo/ground/projects/ima/src/__init__.py", line 163, in main
+    _info(re.sub(r'(?<!\\)\{(e|w|l|s|d)\}', sub, opts.image_link))
+  File "/usr/lib/python3.10/re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/home/kueppo/ground/projects/ima/src/__init__.py", line 157, in sub
+    return MIMETYPE_EXT[link['mime']]
+KeyError: 'JPEG'
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://world-fr.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://world-th.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://www.medicalnewstoday.com skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+Traceback (most recent call last):
+  File "/home/kueppo/ground/projects/ima/src/__main__.py", line 13, in <module>
+    ima.main()
+  File "/home/kueppo/ground/projects/ima/src/__init__.py", line 163, in main
+    _info(re.sub(r'(?<!\\)\{(e|w|l|s|d)\}', sub, opts.image_link))
+  File "/usr/lib/python3.10/re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/home/kueppo/ground/projects/ima/src/__init__.py", line 157, in sub
+    return MIMETYPE_EXT[link['mime']]
+KeyError: 'jpg'
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+sh: can't kill pid 14780: No such process
+[[31mWarn[0m] Failed, Connection timeout.
+sh: can't kill pid 14780: No such process
+[[31mWarn[0m] Failed, Connection timeout.
+sh: can't kill pid 14780: No such process
+sh: can't kill pid 14780: No such process
+[[31mWarn[0m] Failed, Connection timeout.
+sh: can't kill pid 14780: No such process
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://fr.depositphotos.com skipping ...
+[[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mWarn[0m] Failed, Connection timeout.
+[[31mErr[0m] Could not follow https://fr.depositphotos.com skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+sh: can't kill pid 14780: No such process
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+./pull: line 153: y/[A-Z]/[a-z]/g: not found
+mktemp: (null): Invalid argument
+./pull: line 153: y/[A-Z]/[a-z]/: not found
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+mktemp: (null): Invalid argument
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+mktemp: (null): Invalid argument
+[[31mWarn[0m] Failed to connect.
+mktemp: (null): Invalid argument
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://www.carrefour.fr skipping ...
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+/tmp/img/: Is a directory
+./pull: wget failed to download image
+rm: '/tmp/img' is a directory
+sh: can't kill pid 795: No such process
