@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#set -x
+
 # cmd line options
 CSV_DIR=''
 IMG_DIR=''
@@ -15,14 +17,14 @@ usage() {
    printf '\t-i: path to the directory containing images\n' >&2
    printf '\t-c: path to the directory containing unfiltered csv files\n' >&2
    printf '\t-g: path to the directory containing filterd csv files\n' >&2
-   printf 'NOTE: All options with arguments are mandatory\n' >&2
+   printf 'NOTE: All options with arguments are mandatory\n.' >&2
    exit 1
 }
 
 parse_args_prepare() {
    local ERROR=''
 
-   while test -gt 0 ; do
+   while test $# -gt 0 ; do
       expr "$1" : '-h$' >/dev/null && usage
 
       if test $# -lt 1 || expr "$2" : '-' >/dev/null ; then
