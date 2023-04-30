@@ -117,7 +117,7 @@ kill_workers() {
 
    IFS=$':'
    for W_PID in $W_PIDS ; do
-      kill -9 $W_PID
+      kill -KILL -- -$W_PID
    done
    exit 1
 }
@@ -165,8 +165,7 @@ spawn_workers () {
          --timeout $TIMEOUT \
          --retrys $N_RETRYS \
          --retrys-per-sites $N_RETRYS_SITES \
-         --image-link '{w} {l} {e}' "$QUERY" |
-      while read RECORD ; do
+         --image-link '{w} {l} {e}' "$QUERY" | while read RECORD ; do
          SITE=$(printf '%s\n' "$RECORD" | awk -F[' '] '{print $1}')
          LINK=$(printf '%s\n' "$RECORD" | awk -F[' '] '{print $2}')
          IMG_FILE="$(mktemp -u XXXXXX).$(printf '%s\n' "$RECORD" | awk -F[' '] '{print $3}')"
@@ -174,7 +173,7 @@ spawn_workers () {
 
          wget --quiet --tries 10 "$LINK" --output-document="$ABS_PATH_FILE"
          if test $? -eq 0 ; then
-            printf '%s %s %s %s\n' "$(printf '%s\n' "$QUERY" | base64)" "$SITE" "$LINK" "$IMG_FILE" >>"$CSV_FILE"
+            printf '%s %s %s %s\n' "$(printf '%s\n' "$QUERY" | base64 | tr -d '\n')" "$SITE" "$LINK" "$IMG_FILE" >>"$CSV_FILE"
          else
             printf '%s: wget failed to download image\n' "$0" >&2
             rm -v "$ABS_PATH_FILE" >&2

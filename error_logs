@@ -5737,3 +5737,126 @@ AssertionError: expected name token at '<![\x16�z_�?��,Slo�r�N\x03'
 [[31mWarn[0m] Could not search, HTTP response error.
 [[31mWarn[0m] Could not search, HTTP response error.
 [[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://www.maxims-shop.com skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+Killed
+sh: can't kill pid 4144: No such process
+Killed
+sh: can't kill pid 4144: No such process
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mErr[0m] Could not follow https://sync.myfitnesspal.com skipping ...
+[[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+Killed
+sh: can't kill pid 4188: No such process
+Killed
+sh: can't kill pid 4188: No such process
+[[31mErr[0m] Could not follow https://www.cairn.info skipping ...
+./pull: wget failed to download image
+removed 'images/EKgcIL.png'
+sh: can't kill pid 4251: No such process
+Killed
+sh: can't kill pid 4251: No such process
+[[31mErr[0m] Could not follow https://latelierauvergnat.com skipping ...
+[[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+[[31mErr[0m] Could not follow https://centraleachatexport.com skipping ...
+./pull: wget failed to download image
+removed 'images/mBFOCG.png'
+./pull: wget failed to download image
+removed 'images/FGBFbf.jpg'
+./pull: wget failed to download image
+removed 'images/CpkJIM.jpg'
+[[31mWarn[0m] Failed to connect.
+sh: can't kill pid 4579: No such process
+[[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+Killed
+sh: can't kill pid 4579: No such process
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed, Read timeout.
+[[31mWarn[0m] Failed to connect.
+[[31mErr[0m] Could not follow https://latelierauvergnat.com skipping ...
+[[31mErr[0m] Could not follow https://world.openfoodfacts.org skipping ...
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mWarn[0m] Could not search, HTTP response error.
+[[31mErr[0m] Could not follow https://fr.openfoodfacts.org skipping ...
+./pull: wget failed to download image
+removed 'images/FEgkgi.jpg'
+./pull: wget failed to download image
+removed 'images/EOJnfl.jpg'
+./pull: wget failed to download image
+removed 'images/EpidNF.jpg'
+./pull: wget failed to download image
+removed 'images/LdGjoj.jpg'
+./pull: wget failed to download image
+removed 'images/DLdgDh.jpg'
+sh: can't kill pid 4893: No such process
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+[[31mWarn[0m] Failed to connect.
+./pull: wget failed to download image
+removed 'images/pLAjcF.jpg'
+./pull: wget failed to download image
+removed 'images/ncoehd.jpg'
+./pull: wget failed to download image
+removed 'images/lCclNo.jpg'
+./pull: wget failed to download image
+removed 'images/eMNEoN.jpg'
+sh: can't kill pid 4893: No such process

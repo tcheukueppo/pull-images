@@ -82,9 +82,9 @@ choose_records() {
       printf 'ON %s\n' "$CSV_FILE"
       while read RECORD ; do
          IMG=$(printf '%s\n' "$RECORD" | awk -F[' '] '{print $4}')
-         IMG_REGEX=$(printf '%s\n' "$IMG" | sed -e 's/\./\./')
-         IMG_ABS_PATH="${IMG_DIR%%/}/$IMG"
+         IMG_REGEX=$(printf '%s\n' "$IMG" | sed -e 's/\./\\./')
 
+         IMG_ABS_PATH="${IMG_DIR%%/}/$IMG"
          cat "$CLEAN_CSV_FILE" | grep -q " $IMG_REGEX$" && continue
 
          # check if image exist and if not, with permission, remove record
