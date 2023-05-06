@@ -2,54 +2,30 @@
 
 ## TECHNIQUE
 
-1. Iterate over tags having contents and try to match each content with a regular expression
-describing the price in your unit of interest(xaf, euro, dollar, ... etc.).
+1. Iterate over tags with contents and try to match each tag's content against a regular expression
+describing the price in your unit of interest (XAF, EURO, DOLLAR, ... etc.) and if its matches
+then marked it.
 
-```
-(?<i> (?&FLOAT) ) (?<u> (?&UNITS) )?
-(?&PAD) (?<r> (?&RANGE) ) (?&PAD)
-(?(<r>)
-  (?<ii> (?&FLOAT) )?
-  (?(<ii>)
-     (?<u> (?&UNITS) )?
-  )
-)
-(?(DEFINE)
-  (?<FLOAT> \d+ (?: [.,] \d+ )? )
-  (?<PAD> \s* )
-  (?<RANGE> [-] )
+2. For each marked tag, attempt to locate the most closest article name by executing
+**in order** the following steps. Avoid the next steps if you successfully found your targeting
+article.
 
-  (?<DOLLAR> $ | &dollar; | (?i: dollar(?:s)? ) )
-  (?<EURO> € | &euro; | (?i: euro(?:s)? ) )
-  # define units here ...
+- Check the content of the tag itself to see if the name of your targeting article exists(Naive?) and
+if so then we fill in the record for this price:
 
-  (?<UNITS>
-       (?&DOLLAR) 
-     | (?&EURO)
-     # more units ...
-  )
-)
-```
+> * The extracted article name in the tag's content.
+> * The precision of the extracted article name.
+> * A distance of zero between price and the extracted article.
 
-2. For a given marked tag, if this defined regex matches a substring of its content, then attempt to
-locate the most closest targeting article name by executing **in order** the following
-steps. If you succeed in either one of them then don't follow the next steps.
+- Without crossing marked tags, check the content of each of its upper siblings from the closest
+to the farthest one and if you found your targeting article name, then stop there and fill in
+the record for this price.
 
-- Check the content of the tag itself to see if the name of your targeting article exists(Naive?).
+> * The extracted article name in the content.
+> * The precision of the extracted article name.
+> * The distance between the extracted article and the marked tags(Both from the same tag).
 
-If exists then we fill in the record for this price:
+- Well, if you've arrived here then that means the page in question might be for that of
+an ecommerce website, so this is my logic:
 
-* The extracted article name in the tag's content.
-* The precision of the extracted article name.
-* The distance between the tag and matched price which is zero in this case.
 
-- Without crossing marked tag, check content of each of its upper siblings from the closest
-to the farthest one and if you found your targeting article name, then stop there
-and fill in the record for this price.
-
-* The extracted article name in the content.
-* The precision of the extracted article name.
-* The distance between the extracted article and the 
-
-- Well, if you arrived here then that means the page might be that of an ecomerce
-website, do the following.
