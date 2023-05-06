@@ -55,12 +55,12 @@ my $PRICE_RE = qr/
 
       (?<DOLLAR> $ | &dollar; | (?i: dollar(?:s)? ) )
       (?<EURO> € | &euro; | (?i: euro(?:s)? ) )
-      # ...
+      # define units here
 
       (?<UNITS>
            (?&DOLLAR) 
          | (?&EURO)
-         # ...
+         # more units
       )
    )
 /x;
