@@ -26,22 +26,21 @@ if so then we fill-in the record for the price found in the marked tag:
 > 2. The precision of the extracted article name.
 > 3. The distance between the extracted article's tag and the marked tags which is zero in this case.
 
-- Without crossing marked tags, check the content of each of its upper siblings from the closest
-to the farthest one and if you encounter your targeting article, then stop there and fill-in
-the record for the price found in the marked tag:
+- Without crossing marked tags, check the contents of its upper siblings followed by that of its lower
+siblings. For each sense, starting from the closest to the farthest slibing and if you encounter your
+targeting article, then stop there and fill-in the record for the price found in the marked tag:
 
 > 1. The extracted article name in the content.
 > 2. The precision of the extracted article name.
-> 3. A distance of zero between price and the extracted article.
+> 3. The number of tags separating the marked tag and the slibing whose content matches the targeting article.
 
 - Well, if you've arrived here then that means the page in question might be for that of
 an ecommerce website, so this is my logic(Makes sense?):
 
 Note: Give up if you encounter another marked tag.
 
-> 1. Move to the parent tag and check same as in - for it content.
-> 2. If the previous step fails, do the same for the content of its upper slibing
-> 3. 
+> 1. Go up to the parent tag
+> 2. 
 
 ### GENERATING A REGULAR EXPRESSION FOR MATCHING ARTICLE NAMES
 
