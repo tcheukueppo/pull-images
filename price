@@ -40,21 +40,27 @@ def fetch_pages(query):
 END
 
 my $PRICE_RE = qr/
-   (?&PAD)
-   (?<u> (?&UNITS) )? (?<i> (?&FLOAT) )
-   (?(<u>) (?&PAD) | (?<u> (?&UNITS) ) (?&PAD) )
+   (?<i> (?&FLOAT) ) (?<u> (?&UNITS) )?
+   (?&PAD) (?<r> (?&RANGE) ) (?&PAD)
+   (?(<r>)
+      (?<ii> (?&FLOAT) )?
+      (?(<ii>)
+         (?<u> (?&UNITS) )?
+      )
+   )
    (?(DEFINE)
-      (?<PAD> \s* -? \s* )
-
       (?<FLOAT> \d+ (?: [.,] \d+ )? )
+      (?<PAD> \s* )
+      (?<RANGE> [-] )
+
       (?<DOLLAR> $ | &dollar; | (?i: dollar(?:s)? ) )
       (?<EURO> € | &euro; | (?i: euro(?:s)? ) )
-      # define more units
+      # ...
 
       (?<UNITS>
            (?&DOLLAR) 
          | (?&EURO)
-         # more units
+         # ...
       )
    )
 /x;
