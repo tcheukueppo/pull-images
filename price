@@ -2,20 +2,16 @@
 
 use strict;
 use warnings;
-use feature qw/ say /;
+use feature qw(say);
 
 use Mojo::DOM;
 
 
 use Inline Python => <<'END';
-### to be removed
-import sys
-sys.path.append('/home/kueppo/ground/projects/ima/')
-
 import requests
 
-from src.search import Search
-from src.utils  import generate_headers
+from ima.search import Search
+from ima.utils  import generate_headers
 
 def fetch_pages(query):
    links = []
@@ -73,10 +69,10 @@ my @pages = fetch_pages($ARGV[0]);
 
 if (@pages) {
    foreach my $page (@pages) {
-      my $text = $dom->parse($page)->all_text;
-      say $text
+      my $text = $dom->parse($page);
+      # ...
    }
 }
 else {
-   die "$0: ERROR: could not fetch pages";
+   die "$0: ERROR: could not fetch pages\n";
 }

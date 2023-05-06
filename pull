@@ -2,9 +2,6 @@
 
 #set -x
 
-# ima isn't ready yet
-alias ima='python ~/ground/projects/ima/src/__main__.py'
-
 # contains the list of pids of all the workers
 W_PIDS=''
 
@@ -42,7 +39,7 @@ check_requirements () {
    local PROG_NAME='' ERROR=''
 
    # ima is to be added in future
-   for PROG_NAME in wget ; do
+   for PROG_NAME in wget ima ; do
       command -v $PROG_NAME >/dev/null
       if test $? -ne 0 ; then
          printf '%s: error: %s not found\n' "$0" "$PROG_NAME" >&2
