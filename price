@@ -41,20 +41,20 @@ END
 
 my $PRICE_RE = qr/
    (?&PAD)
-   (?<s> (?&UNIT) )
-      (?&FLOAT)
-   (?(<s>) (?&PAD) | (?&UNIT) (?&PAD) )
+   (?<u> (?&UNITS) )? (?<i> (?&FLOAT) )
+   (?(<u>) (?&PAD) | (?<u> (?&UNITS) ) (?&PAD) )
    (?(DEFINE)
-      (?<FLOAT> \d+ (?: [.] \d+ )? )
+      (?<PAD> \s* -? \s* )
 
-      (?<DOLLAR> $ | (?i: Dollar(?:s)? ) )
-      (?<EURO> € | (?i: Euro(?:s)? ) )
-      (?<PAD> \s* )
-      # ...
-      (?<UNIT>
+      (?<FLOAT> \d+ (?: [.,] \d+ )? )
+      (?<DOLLAR> $ | &dollar; | (?i: dollar(?:s)? ) )
+      (?<EURO> € | &euro; | (?i: euro(?:s)? ) )
+      # define more units
+
+      (?<UNITS>
            (?&DOLLAR) 
          | (?&EURO)
-         # ...
+         # more units
       )
    )
 /x;
