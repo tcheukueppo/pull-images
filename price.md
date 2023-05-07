@@ -38,7 +38,7 @@ If you encounter your targeting article, then stop there and fill-in the record 
 
 - Well, if you've arrived here then that means the page in question might be for that of an ecommerce website.
 While being at the marked tag whose content matches the price regex, recursively perform the following steps
-until you find the article name or you got to the `body` tag(Makes sense?):
+until you find the article name or you got to the `body` tag(makes sense?):
 
 Note: Give up if you encounter another marked tag.
 
@@ -47,7 +47,14 @@ Note: Give up if you encounter another marked tag.
 
 ### GENERATING A REGULAR EXPRESSION FOR MATCHING ARTICLE NAMES
 
-What you input much not 
+The name of the article whose price you wish know might probably be never what is presented to you on a web page.
+This is because you might not spell it correctly or you wrote its name in your own language but unfortunately got a name
+a bit similar but not exactly the same. So, how do you figure this out? Here I outline some of the obvious steps
+we would use to generate a regular expression which matches articles similar to the one specified as input.
+
+Supposing that `$a` is the name of the article whose pric you wish to have, We do the following steps:
+
+#### CANONICAL
 
 ### MEASURE PRECISION OF THE EXTRACTED ARTICLE MATCHED BY THE REGEX
 
