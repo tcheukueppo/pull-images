@@ -27,22 +27,27 @@ if so then we fill-in the record for the price found in the marked tag:
 > 3. The distance between the extracted article's tag and the marked tags which is zero in this case.
 
 - Without crossing marked tags, check the contents of its upper siblings followed by that of its lower
-siblings. For each sense, starting from the closest to the farthest slibing and if you encounter your
-targeting article, then stop there and fill-in the record for the price found in the marked tag:
+siblings. For each sides, start from the closest to the farthest slibing. If a sibling embed more
+tags, then recursively descend into all of those tags to match thier content against the article regex.
+
+If you encounter your targeting article, then stop there and fill-in the record for the price found in the marked tag:
 
 > 1. The extracted article name in the content.
 > 2. The precision of the extracted article name.
 > 3. The number of tags separating the marked tag and the slibing whose content matches the targeting article.
 
-- Well, if you've arrived here then that means the page in question might be for that of
-an ecommerce website, so this is my logic(Makes sense?):
+- Well, if you've arrived here then that means the page in question might be for that of an ecommerce website.
+While being at the marked tag whose content matches the price regex, recursively perform the following steps
+until you find the article name or you got to the `body` tag(Makes sense?):
 
 Note: Give up if you encounter another marked tag.
 
-> 1. Go up to the parent tag
-> 2. 
+> 1. Go up to the parent tag.
+> 2. Repeat the previous step.
 
 ### GENERATING A REGULAR EXPRESSION FOR MATCHING ARTICLE NAMES
+
+What you input much not 
 
 ### MEASURE PRECISION OF THE EXTRACTED ARTICLE MATCHED BY THE REGEX
 
